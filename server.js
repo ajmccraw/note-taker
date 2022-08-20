@@ -10,3 +10,15 @@ app.use(express.urlencoded({extended: true}));
 
 //incoming JSON info will be analyzed into its parts
 app.use(express.json());
+
+// Linking to routes - api
+app.use("/api", apiRoutes);
+
+// Linking to routes - html
+app.use("/", htmlRoutes);
+
+//
+app.use(express.static('public'));
+
+
+
