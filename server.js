@@ -17,8 +17,13 @@ app.use("/api", apiRoutes);
 // Linking to routes - html
 app.use("/", htmlRoutes);
 
-//
-app.use(express.static('public'));
+// public folder
+app.use(express.static("public"));
+
+
+app.listen(PORT, () => {
+    console.log(`Server for API is available for ${PORT}`)
+});
 
 
 
