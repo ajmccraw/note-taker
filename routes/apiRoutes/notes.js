@@ -35,6 +35,8 @@ router.get("/notes", (req, res) => {
 router.post("/notes", (req, res) => {
   req.body.id = notes.length.toString();
 
+  // id will be based on the next array index and added to the dtabase whatever it may be
+
   if (!validateNote(req.body)) {
     res.status(400).send("The note is not properly formatted.");
   } else {
