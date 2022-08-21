@@ -32,7 +32,7 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 ## Usage
 
-![description](path)
+![Note Taker screenshot](/public/assets/images/note-taker-screenshot.png))
 
 ## License
 
