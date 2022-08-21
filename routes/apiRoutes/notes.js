@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { notes } = require("../../db/db.json");
+const notes = require("../../db/db.json");
 const fs = require("fs");
 const path = require("path");
 
@@ -28,8 +28,9 @@ function validateNote(note) {
 };
 
 router.get("/notes", (req, res) => {
+  console.log(notes);
   let results = notes;
-  res.json(results);
+  res.json(results || []);
 });
 
 router.post("/notes", (req, res) => {
